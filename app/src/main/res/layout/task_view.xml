@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="15dp"
+    android:layout_margin="10dp"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/taskNameDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task Name"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/taskFinishBtn"
+                app:layout_constraintHorizontal_bias="0.712"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/taskStartTimeDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task Start Time"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/taskNameDisplay" />
+
+            <ImageButton
+                android:id="@+id/taskDeleteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:tint="#000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:onClick="Delete"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@android:drawable/ic_menu_delete" />
+
+            <ImageButton
+                android:id="@+id/taskFinishBtn"
+                android:layout_width="45dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/taskDeleteBtn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@android:drawable/checkbox_on_background" />
+
+            <TextView
+                android:id="@+id/taskCompletionDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Task Completion"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/taskCompleteTimeDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task Complete Time"
+                app:layout_constraintBottom_toTopOf="@+id/taskCompletionDisplay"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/taskStartTimeDisplay"
+                app:layout_constraintVertical_bias="1.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
